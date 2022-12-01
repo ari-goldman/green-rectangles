@@ -1,0 +1,60 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+  
+#container {
+    width: inherit;
+    height: inherit;
+    display: grid;
+}
+
+#container > .box {
+    border-width: 0px;
+    background-color: rgb(0, 7, 3);
+    transition-property: "background-color padding";
+    transition-duration: 1000ms;
+    transition-timing-function: ease-out;
+}
+
+#container > .box#justClicked[data-click-toggle="off"] {
+    transition-duration: 0ms;
+    background-color: rgb(207, 236, 216);
+}
+
+#container > .box#justClicked[data-click-toggle="on"] {
+    transition-duration: 0ms;
+    background-color: rgb(149, 13, 13)
+}
+
+#container > .box[data-click-toggle="off"] {
+    background-color: rgb(0, 7, 3);
+    transition-duration: 1000ms;
+}
+
+#container > .box[data-click-toggle="on"] {
+    background-color: rgb(16, 185, 67);
+    transition-duration: 1000ms;
+}
+
+#container > .box[data-click-toggle="off"]:hover {
+    background-color: rgb(18, 243, 86);
+    transition-duration: 100ms;
+}
+
+#container > .box[data-click-toggle="on"]:hover {
+    background-color: rgb(243, 18, 18);
+    transition-duration: 100ms;
+}
+
+
+
+#container > .box:hover {
+    border: 0px dashed rgb(18,243,86);
+    transition-duration: 100ms;
+    background-color: rgb(18, 243, 86);
+}
+
